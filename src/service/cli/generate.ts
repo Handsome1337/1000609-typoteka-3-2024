@@ -1,13 +1,12 @@
 import chalk from 'chalk';
 import { readFile, writeFile } from 'node:fs/promises';
-import { ExitCode } from '../../constants.js';
+import { ExitCode, MOCKS_FILE_NAME } from '../../constants.js';
 import { getRandomInt, getRandomDate, shuffleAndSlice } from '../../utils.js';
 import type { Article, Command } from './types.js';
 
 const DEFAULT_ARTICLES_COUNT = 1;
 const MAX_ARTICLES_COUNT = 1000;
 const MAX_ANNOUNCE_COUNT = 5;
-const FILE_NAME = 'mocks.json';
 
 const FILE_TITLES_PATH = './data/titles.txt';
 const FILE_SENTENCES_PATH = './data/sentences.txt';
@@ -59,7 +58,7 @@ const command: Command = {
     );
 
     try {
-      await writeFile(FILE_NAME, content);
+      await writeFile(MOCKS_FILE_NAME, content);
       console.info(chalk.green('Операция выполнена успешно. Файл создан.'));
     } catch {
       console.error(chalk.red('Не удаётся записать данные в файл...'));
