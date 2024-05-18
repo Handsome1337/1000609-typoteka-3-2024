@@ -7,3 +7,4 @@ Thumbs.db
 *.sublime*
 node_modules/
 build/
+mocks.json
