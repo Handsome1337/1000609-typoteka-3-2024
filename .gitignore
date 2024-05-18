@@ -6,3 +6,4 @@ Thumbs.db
 .idea
 *.sublime*
 node_modules/
+build/
