@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+*.local
+*.log*
+.vscode
+.idea
+*.sublime*
+node_modules/
