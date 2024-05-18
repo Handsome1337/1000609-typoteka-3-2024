@@ -12,7 +12,7 @@
     "test": "npm run lint",
     "lint": "eslint --max-warnings 0 src/",
     "build": "rimraf ./build && tsc --noEmit false",
-    "start": "ts-node ./src/service/service.ts",
+    "start": "nodemon ./src/service/service.ts --server",
     "prepare": "husky"
   },
   "repository": {
@@ -35,6 +35,7 @@
     "globals": "15.2.0",
     "husky": "9.0.11",
     "lint-staged": "15.2.2",
+    "nodemon": "3.1.0",
     "prettier": "3.2.5",
     "rimraf": "5.0.7",
     "ts-node": "10.9.2",
