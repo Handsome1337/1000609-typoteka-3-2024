@@ -9,7 +9,7 @@ export default tseslint.config(
   ...tseslint.configs.recommended,
   prettier,
   {
-    ignores: ['**/build/**']
+    ignores: ['**/public/js/*.js', '**/build/**']
   },
   {
     languageOptions: {
