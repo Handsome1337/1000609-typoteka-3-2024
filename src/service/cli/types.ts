@@ -3,6 +3,11 @@ interface Command {
   run(args?: string[]): void | Promise<void>;
 }
 
+interface Comment {
+  id: string;
+  text: string;
+}
+
 interface Article {
   id: string;
   title: string;
@@ -10,6 +15,7 @@ interface Article {
   announce: string;
   fullText: string;
   categories: string[];
+  comments: Comment[];
 }
 
-export { Command, Article };
+export { Command, Comment, Article };

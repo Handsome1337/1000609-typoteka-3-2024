@@ -13,4 +13,9 @@ const enum HttpCode {
   InternalServerError = 500
 }
 
-export { MOCKS_FILE_NAME, MAX_ID_LENGTH, ExitCode, HttpCode };
+const enum CommentsRestrict {
+  Min = 0,
+  Max = 4
+}
+
+export { MOCKS_FILE_NAME, MAX_ID_LENGTH, ExitCode, HttpCode, CommentsRestrict };
