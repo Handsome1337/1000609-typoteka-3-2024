@@ -1,11 +1,10 @@
 import chalk from 'chalk';
 import express from 'express';
 import { readFile } from 'node:fs/promises';
-import { HttpCode, MOCKS_FILE_NAME } from '../../constants.js';
+import { HttpCode, MOCKS_FILE_NAME, NOT_FOUND_MESSAGE_TEXT } from '../../constants.js';
 import type { Command } from './types.js';
 
 const DEFAULT_PORT = 3000;
-const NOT_FOUND_MESSAGE_TEXT = 'Не найдено';
 
 const { Router } = express;
 
