@@ -7,7 +7,9 @@ const enum ExitCode {
 
 const enum HttpCode {
   Ok = 200,
-  NotFound = 404
+  BadRequest = 400,
+  NotFound = 404,
+  InternalServerError = 500
 }
 
 export { MOCKS_FILE_NAME, ExitCode, HttpCode };

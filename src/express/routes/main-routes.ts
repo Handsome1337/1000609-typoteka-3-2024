@@ -2,9 +2,9 @@ import { Router } from 'express';
 
 const mainRouter = Router();
 
-mainRouter.get('/', (req, res) => res.send(req.originalUrl));
-mainRouter.get('/register', (req, res) => res.send(req.originalUrl));
-mainRouter.get('/login', (req, res) => res.send(req.originalUrl));
-mainRouter.get('/search', (req, res) => res.send(req.originalUrl));
+mainRouter.get('/', (_req, res) => res.render('main'));
+mainRouter.get('/register', (_req, res) => res.render('sign-up'));
+mainRouter.get('/login', (_req, res) => res.render('login'));
+mainRouter.get('/search', (_req, res) => res.render('search'));
 
 export default mainRouter;
