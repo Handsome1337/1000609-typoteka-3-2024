@@ -4,6 +4,7 @@ interface Command {
 }
 
 interface Article {
+  id: string;
   title: string;
   createdDate: string;
   announce: string;

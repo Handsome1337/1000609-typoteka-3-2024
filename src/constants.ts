@@ -1,4 +1,5 @@
 const MOCKS_FILE_NAME = 'mocks.json';
+const MAX_ID_LENGTH = 6;
 
 const enum ExitCode {
   Error = 1,
@@ -12,4 +13,4 @@ const enum HttpCode {
   InternalServerError = 500
 }
 
-export { MOCKS_FILE_NAME, ExitCode, HttpCode };
+export { MOCKS_FILE_NAME, MAX_ID_LENGTH, ExitCode, HttpCode };

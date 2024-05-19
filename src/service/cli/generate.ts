@@ -1,6 +1,7 @@
 import chalk from 'chalk';
+import { nanoid } from 'nanoid';
 import { readFile, writeFile } from 'node:fs/promises';
-import { ExitCode, MOCKS_FILE_NAME } from '../../constants.js';
+import { ExitCode, MAX_ID_LENGTH, MOCKS_FILE_NAME } from '../../constants.js';
 import { getRandomInt, getRandomDate, shuffleAndSlice } from '../../utils.js';
 import type { Article, Command } from './types.js';
 
@@ -29,6 +30,7 @@ const generateMockData = (
   categories: string[]
 ): Article[] =>
   Array.from({ length: count }, () => ({
+    id: nanoid(MAX_ID_LENGTH),
     title: titles[getRandomInt(0, titles.length - 1)],
     createdDate: getRandomDate(),
     announce: shuffleAndSlice(sentences, MAX_ANNOUNCE_COUNT).join(' '),
