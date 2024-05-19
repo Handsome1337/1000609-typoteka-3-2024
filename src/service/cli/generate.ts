@@ -8,7 +8,8 @@ import {
   MOCKS_FILE_NAME
 } from '../../constants.js';
 import { getRandomInt, getRandomDate, shuffleAndSlice } from '../../utils.js';
-import type { Article, Command, Comment } from './types.js';
+import type { Article, Comment } from '../types.js';
+import type { Command } from './types.js';
 
 const DEFAULT_ARTICLES_COUNT = 1;
 const MAX_ARTICLES_COUNT = 1000;
