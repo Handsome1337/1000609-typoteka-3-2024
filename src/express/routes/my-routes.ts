@@ -2,8 +2,8 @@ import { Router } from 'express';
 
 const myRouter = Router();
 
-myRouter.get('/', (req, res) => res.send(req.originalUrl));
-myRouter.get('/comments', (req, res) => res.send(req.originalUrl));
-myRouter.get('/categories', (req, res) => res.send(req.originalUrl));
+myRouter.get('/', (_req, res) => res.render('user/my'));
+myRouter.get('/comments', (_req, res) => res.render('user/comments'));
+myRouter.get('/categories', (_req, res) => res.render('user/all-categories'));
 
 export default myRouter;

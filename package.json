@@ -11,7 +11,8 @@
   "scripts": {
     "test": "npm run lint",
     "lint": "eslint --max-warnings 0 src/",
-    "build": "rimraf ./build && tsc --noEmit false && cpx \"src/express/public/**\" build/express/public",
+    "copy-static": "cpx \"src/express/public/**\" build/express/public && cpx \"src/express/templates/**\" build/express/templates",
+    "build": "rimraf ./build && tsc --noEmit false && npm run copy-static",
     "start": "nodemon ./src/service/service.ts --server",
     "start-front-server": "nodemon ./src/express/express.ts",
     "prepare": "husky"
