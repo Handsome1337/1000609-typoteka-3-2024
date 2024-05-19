@@ -1,5 +1,6 @@
 const MOCKS_FILE_NAME = 'mocks.json';
 const MAX_ID_LENGTH = 6;
+const BAD_REQUEST_MESSAGE_TEXT = 'Некорректный запрос';
 
 const enum ExitCode {
   Error = 1,
@@ -18,4 +19,11 @@ const enum CommentsRestrict {
   Max = 4
 }
 
-export { MOCKS_FILE_NAME, MAX_ID_LENGTH, ExitCode, HttpCode, CommentsRestrict };
+export {
+  MOCKS_FILE_NAME,
+  MAX_ID_LENGTH,
+  BAD_REQUEST_MESSAGE_TEXT,
+  ExitCode,
+  HttpCode,
+  CommentsRestrict
+};
